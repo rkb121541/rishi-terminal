@@ -1,6 +1,14 @@
+:root {
+  --bg: #282828;
+  --orange: #fe8019;
+  --blue: #458588;
+  --purple: #b16286;
+  --green: #b8bb26;
+  --red: #fb4934;
+}
 
-
-.terminal{
-    --size: 1.4;
-    background-color: #1d2021;
+.terminal {
+  --size: 1.4;
+  background-color: var(--bg);
+  --font: "JetBrains Mono", monospace;
 }

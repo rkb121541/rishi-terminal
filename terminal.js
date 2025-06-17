@@ -25,13 +25,13 @@ function showWelcome() {
 ██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝  
 ╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗
  ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝]
+
 ${showHelp()}
 `;
 }
 
 function showHelp() {
   return `
-[[;${colors.orange};]
 Available commands:
   help        - Displays this help menu
   whoareyou   - About me
@@ -40,7 +40,7 @@ Available commands:
   linkedin    - My Linkedin
   github      - My Github
 
-Feel free to try out some other commands :)]
+Feel free to try out some other commands :)
 `;
 }
 
@@ -66,11 +66,15 @@ $("body").terminal(
         break;
       case cmd === "linkedin":
         term.echo("\nOpening my Linkedin...\n");
-        window.open("https://www.linkedin.com/in/rishibidarkota/", "_blank");
+        setTimeout(() => {
+          window.open("https://www.linkedin.com/in/rishibidarkota/", "_blank");
+        }, 1000);
         break;
       case cmd === "github":
         term.echo("\nOpening my Github...\n");
-        window.open("https://github.com/rkb121541", "_blank");
+        setTimeout(() => {
+          window.open("https://github.com/rkb121541", "_blank");
+        }, 1000);
         break;
       case cmd.startsWith("sudo"):
         term.echo(
@@ -95,6 +99,7 @@ $("body").terminal(
   },
   {
     greetings: showWelcome(),
+    prompt: `[[;${colors.green};]user]@[[;${colors.orange};]rishi-terminal]: `,
     render: true,
     keymap: {
       "CTRL+R": function() {

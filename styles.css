@@ -5,10 +5,12 @@
   --purple: #b16286;
   --green: #b8bb26;
   --red: #fb4934;
+  --fg3: #bdae93;
 }
 
 .terminal {
   --size: 1.4;
   background-color: var(--bg);
   --font: "JetBrains Mono", monospace;
+  --color: var(--fg3);
 }

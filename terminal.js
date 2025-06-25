@@ -99,7 +99,7 @@ $("body").terminal(
   },
   {
     greetings: showWelcome(),
-    prompt: `[[;${colors.green};]user]@[[;${colors.orange};]rishi-terminal]: `,
+    prompt: `[[;${colors.green};]user]@[[;${colors.orange};]rishi-terminal]:[[;${colors.blue};]~]$ `,
     render: true,
     keymap: {
       "CTRL+R": function() {

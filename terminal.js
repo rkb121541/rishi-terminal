@@ -45,7 +45,7 @@ Feel free to try out some other commands :)
 }
 
 $("body").terminal(
-  function(command, term) {
+  function (command, term) {
     const cmd = command.trim().toLowerCase();
     switch (true) {
       case cmd === "":
@@ -102,12 +102,22 @@ $("body").terminal(
     prompt: `[[;${colors.green};]user]@[[;${colors.orange};]rishi-terminal]:[[;${colors.blue};]~]$ `,
     render: true,
     keymap: {
-      "CTRL+R": function() {
+      "CTRL+R": function () {
         return false;
       },
     },
-    keydown: function(e) {
+    keydown: function (e) {
       if (e.which == 82 && e.ctrlKey) {
+        return true;
+      }
+    },
+    keymap: {
+      "CTRL+L": function() {
+        return false;
+      },
+    },
+    keydown: function (e) {
+      if (e.which == 76 && e.ctrlKey) {
         return true;
       }
     },

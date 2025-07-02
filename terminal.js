@@ -105,18 +105,14 @@ $("body").terminal(
       "CTRL+R": function () {
         return false;
       },
-    },
-    keydown: function (e) {
-      if (e.which == 82 && e.ctrlKey) {
-        return true;
-      }
-    },
-    keymap: {
       "CTRL+L": function() {
         return false;
       },
     },
     keydown: function (e) {
+      if (e.which == 82 && e.ctrlKey) {
+        return true;
+      }
       if (e.which == 76 && e.ctrlKey) {
         return true;
       }

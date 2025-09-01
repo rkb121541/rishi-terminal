@@ -34,8 +34,7 @@ function showHelp() {
   return `
 Available commands:
   help        - Displays this help menu
-  whoareyou   - About me
-  whoami      - About you
+  whoami      - About me
   email       - My Email
   linkedin    - My Linkedin
   github      - My Github
@@ -53,13 +52,10 @@ $("body").terminal(
       case cmd === "help":
         term.echo(showHelp());
         break;
-      case cmd === "whoareyou":
-        term.echo(
-          "\nMy name is Rishi Bidarkota and I am an aspiring Software Engineer.\n",
-        );
-        break;
       case cmd === "whoami":
-        term.echo("\nI don't know who you are. Why are you asking me?\n");
+        term.echo(
+          "\nMy name is Rishi Bidarkota and I am an aspiring Software Engineer/ Quantitative Developer.\n",
+        );
         break;
       case cmd === "email":
         term.echo(`\nEmail me at [[;${colors.blue};]rbidarko@stevens.edu]\n`);
